@@ -1,0 +1,1 @@
+Tutti i lavori svolti nel progetto, precedenti al primo commit, non sono stati riportati sulla piattaforma poichè lavoravamo al progetto in presenza su un solo computer.
