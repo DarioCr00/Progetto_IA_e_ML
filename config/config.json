@@ -7,7 +7,7 @@
     "train_percentage": 20,
     "val_percentage": 10,
     "file_path": "./dataset_E/eth-usdt.csv",
-    "logs_path": "../Project/logs/",
+    "logs_path": "./logs/",
     "lstm_model_path": "./models/best_lstm_model.pth",
     "gru_model_path": "./models/best_gru_model.pth",
     "patience": 15
