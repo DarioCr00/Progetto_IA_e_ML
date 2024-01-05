@@ -4,7 +4,7 @@
     "lung_data": 20000,
     "lr": 0.005,
     "epochs": 40,
-    "train_percentage": 20,
+    "train_percentage": 60,
     "val_percentage": 10,
     "file_path": "./dataset_E/eth-usdt.csv",
     "logs_path": "./logs/",
