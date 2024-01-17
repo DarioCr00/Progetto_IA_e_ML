@@ -168,6 +168,13 @@ with torch.no_grad():
     # Visualizzazione del grafico delle previsioni
     dates = pd.to_datetime(dataset['Close Time'])
 
+    #Inversione normalizzazione per visualizzare valori reali
+    scaled_train_data = scaler.inverse_transform(scaled_train_data)
+    scaled_val_data = scaler.inverse_transform(scaled_val_data)
+    scaled_test_data = scaler.inverse_transform(scaled_test_data)
+    lstm_prediction_prices = scaler.inverse_transform(np.column_stack((lstm_prediction_prices, np.zeros_like(lstm_prediction_prices))))[:, 0]
+    gru_prediction_prices = scaler.inverse_transform(np.column_stack((gru_prediction_prices, np.zeros_like(gru_prediction_prices))))[:, 0]
+
     plot_predictions(dates, scaled_train_data[:, 0], scaled_val_data[:, 0], scaled_test_data[:, 0], lstm_prediction_prices, gru_prediction_prices)
 
     # Aggiungi il grafico su TensorBoard
